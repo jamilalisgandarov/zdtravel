@@ -1,0 +1,83 @@
+/*=============================================
+=            Mixins            =
+=============================================*/
+
+/*----------  Icon generator   ----------*/
+
+@mixin icon-common-class-include() {
+    .icon {
+        display: inline-block;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+}
+
+@mixin icon-generator($width, $height, $url_path) {
+    width: $width+px;
+    height: $height+px;
+    background-image: url($url_path);
+}
+
+
+/*----------  Generate percent columns for different devices  ----------*/
+
+@mixin responsive-percent($device_name, $part, $space) {
+    $width: percentage(1 / $part)-$space;
+    .col-#{$device_name}-#{$part} {
+        width: $width;
+    }
+}
+
+
+
+/*----------  Responsive toggle menu  ----------*/
+
+@mixin hamburger-toggle($parent_class_name, $hamburger_class_name, $active_class_name, $width, $height, $line_heigth, $line_top, $line_bottom, $color) {
+    .#{$parent_class_name} {
+        position: relative;
+        width: $width+px;
+        height: $height+px;
+        .#{$hamburger_class_name} {
+            position: relative;
+            line-height: $height+px;
+            height: $line_heigth+px;
+            width: 100%;
+            display: inline-block;
+            background-color: $color;
+            transition: 0.2s linear;
+            &:after,
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                background-color: $color;
+                height: $line_heigth+px;
+                width: 100%;
+                transition: 0.3s ease-in;
+            }
+            &:after {
+                top: -$line_top+px;
+            }
+            &:before {
+                bottom: -$line_bottom+px;
+            }
+        }
+        &.#{$active_class_name} {
+            .#{$hamburger_class_name} {
+                background-color: transparent;
+                &:after {
+                    top: 0;
+                    transform: rotate(135deg);
+                }
+                &:before {
+                    bottom: 0;
+                    transform: rotate(-135deg);
+                }
+            }
+        }
+    }
+}
+
+
+/*=====  End of Mixins  ======*/

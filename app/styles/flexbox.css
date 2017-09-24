@@ -1,0 +1,120 @@
+/*Flexbox CSS*/
+
+.flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.flex-start {
+    -ms-flex-pack: start;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    text-align: start;
+}
+
+.flex-center {
+    -ms-flex-pack: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.flex-end {
+    -ms-flex-pack: end;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    text-align: end;
+}
+
+.flex-top {
+    -ms-flex-align: start;
+    -webkit-box-align: start;
+    align-items: flex-start;
+}
+
+.flex-middle {
+    -ms-flex-align: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.flex-bottom {
+    -ms-flex-align: end;
+    -webkit-box-align: end;
+    align-items: flex-end;
+}
+
+.flex-around {
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+
+.flex-between {
+    -ms-flex-pack: justify;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+.flex-first {
+    -ms-flex-order: -1;
+    -webkit-box-ordinal-group: 0;
+    order: -1;
+}
+
+.flex-last {
+    -ms-flex-order: 1;
+    -webkit-box-ordinal-group: 2;
+    order: 1;
+}
+
+.flex-row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+.flex-col {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.flex-wrap {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.flex-wrap-reverse {
+    -ms-flex-wrap: wrap-reverse;
+    flex-wrap: wrap-reverse;
+}
+
+.flex-content-between {
+    -ms-flex-line-pack: justify;
+    align-content: space-between;
+}
+
+.flex-grow {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.flex-align-right {
+    margin-left: auto;
+}
+
+.flex-align-left {
+    margin-right: auto;
+}
+
+.flex-align-top {
+    margin-bottom: auto;
+}
+
+.flex-align-bottom {
+    margin-top: auto;
+}

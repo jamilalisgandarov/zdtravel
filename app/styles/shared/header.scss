@@ -1,0 +1,74 @@
+/*=============================================
+=            Header            =
+=============================================*/
+
+header {
+    position: relative;
+    z-index: 2;
+    .header-top {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        color: white;
+        padding: 5px 0;
+        ul {
+            li {
+                display: inline-block;
+                a {
+                    display: block;
+                    font-size: 14px;
+                    font-weight: 300;
+                    padding: 10px 16px;
+                    border-right: 1px solid rgba(255, 255, 255, 0.3);
+                }
+                &:last-child {
+                    a {
+                        padding-right: 0;
+                        border-right-color: transparent;
+                    }
+                }
+                &:first-child {
+                    a {
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+    }
+    nav {
+        padding-top: 17px;
+        .nav-holder {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .brand-name {
+                margin-bottom: 29px;
+            }
+            .menu {
+                >ul {
+                    color: white;
+                    >li {
+                        display: inline-block;
+                        a {
+                            font-size: 14px;
+                            text-transform: uppercase;
+                            margin: 0 17px;
+                            &.dropdown {
+                                &:after {
+                                    content: '\f107';
+                                    font-family: 'FontAwesome';
+                                    display: inline-block;
+                                    margin-left: 12px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &[data-page='home'] {}
+    &[data-page='insider'] {}
+}
+
+
+/*=====  End of Header  ======*/

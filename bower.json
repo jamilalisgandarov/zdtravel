@@ -1,0 +1,15 @@
+{
+  "name": "zdtravel",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "modernizr": "~2.8.1",
+    "reset-css": "~2.2.1",
+    "owl.carousel": "owl-carousel2#~2.2.1",
+    "font-awesome": "~4.7.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^3.5.3"
+  }
+}

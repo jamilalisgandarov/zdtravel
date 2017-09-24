@@ -1,0 +1,84 @@
+@import './mixins/mixins';
+@import './variables/variables';
+
+/*=============================================
+=            Common modifications            =
+=============================================*/
+*{
+    outline: none;
+}
+body{
+    font-family:$font_roboto;    
+    font-weight: 300;
+}
+a,
+a:focus,
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+input,
+button {
+    background: transparent;
+    border: none;
+}
+
+.wrapper{
+    width: $size_wrapper-width;
+    margin: 0 auto;
+}
+.section-title{
+    position: relative;
+    font-size: 30px;
+    font-family: $font_san-francisco;
+    font-weight: bold;
+    color:$color_gray-title;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+    &:after{
+        content:'';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 2px;
+        width: 130px;
+        background-color: $color_blue;
+    }
+}
+
+
+/*=====  End of Common modifications  ======*/
+
+
+/*=============================================
+=            Shared imports            =
+=============================================*/
+
+
+@import './shared/fonts';
+@import './shared/icons';
+
+/*=====  End of Shared imports  ======*/
+
+
+
+/*=============================================
+=            Shared layouts            =
+=============================================*/
+@import './shared/header';
+@import './shared/footer';
+
+/*=====  End of Shared layouts  ======*/
+
+
+/*=============================================
+=            Views            =
+=============================================*/
+
+@import './views/_home';
+
+/*=====  End of Views  ======*/
+
+
+

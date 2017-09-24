@@ -1,0 +1,139 @@
+/*=============================================
+=            Home            =
+=============================================*/
+
+#search-home {
+    position: relative;
+    min-height: 100vh;
+    background-image: url("/images/home-background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    &:after {
+        content: "";
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .search-orders {
+        position: relative;
+        z-index: 2;
+        margin: 228px 26px 0 26px;
+        .search-types {
+            .type {
+                min-width: 25%;
+                background-color: rgba(0, 0, 0, 0.2);
+                text-align: center;
+                font-weight: 500;
+                color: white;
+                padding: 12px 0;
+                transition: 0.2s ease;
+                >span {
+                    font-size: 18px;
+                    margin-left: 6px;
+                    display: inline-block;
+                }
+                .icon-holder {
+                    position: relative;
+                    i {
+                        width: 45px;
+                        height: 31px;
+                        transition: 0.2s ease;
+                        &[data-role="normal"] {
+                            opacity: 1;
+                        }
+                        &[data-role="hover"] {
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            opacity: 0;
+                        }
+                    }
+                }
+                &:hover,
+                &.active {
+                    background-color: $color_blue;
+                    .icon-holder {
+                        position: relative;
+                        i {
+                            &[data-role="normal"] {
+                                opacity: 0;
+                            }
+                            &[data-role="hover"] {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .search-content-holder {
+            padding: 55px 40px;
+            background: rgba(0, 0, 0, 0.4);
+            .search-content {
+                .form-element-holder {
+                    display: inline-block;
+                    min-width: 23%;
+                    margin-bottom: 20px;
+                    label {
+                        font-size: 18px;
+                        font-weight: 500;
+                        margin-bottom: 15px;
+                        padding-left: 5px;
+                        color: white;
+                        display: block;
+                    }
+                    .input-holder {
+                        input {
+                            display: block;
+                            width: 100%;
+                            border-width: 1px;
+                            border-color: rgb(255, 255, 255);
+                            border-style: solid;
+                            font-size: 18px;
+                            padding: 12px 15px;
+                            box-sizing: border-box;
+                            padding-right: 33px;
+                            color: white;
+                            font-weight: 300;
+                        }
+                        &.has-icon {
+                            position: relative;
+                            i {
+                                position: absolute;
+                                right: 10px;
+                                top: 12px;
+                            }
+                        }
+                    }
+                    &.submit {
+                        min-width: initial;
+                        button[type='submit'] {
+                            background-color: $color_blue;
+                            color: white;
+                            font-weight: 300;
+                            font-size: 18px;
+                            padding: 12px 15px;
+                            text-align: left;
+                            span {
+                                margin-right: 28px;
+                                vertical-align: middle;
+                            }
+                            i{
+                                vertical-align: middle;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#services{
+    margin-top: 80px;
+}
+/*=====  End of Home  ======*/

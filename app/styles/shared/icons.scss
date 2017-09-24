@@ -1,0 +1,33 @@
+@import '../mixins/mixins.scss';
+
+/*=============================================
+=            Icons            =
+=============================================*/
+
+@include icon-common-class-include();
+.icon-airplane-takeoff {
+    @include icon-generator(45, 31, '../images/icons/icon-airplane-takeoff.png');
+}
+
+.icon-hotel {
+    @include icon-generator(45, 31, '../images/icons/icon-airplane-takeoff.png');
+}
+
+.icon-tours {
+    @include icon-generator(45, 31, '../images/icons/icon-airplane-takeoff.png');
+}
+
+.icon-location {
+    @include icon-generator(20, 24, '../images/icons/icon-location.png');
+}
+
+.icon-date {
+    @include icon-generator(27, 27, '../images/icons/icon-date.png');
+}
+
+
+.icon-search {
+    @include icon-generator(24, 24, '../images/icons/icon-search.png');
+}
+
+/*=====  End of Icons  ======*/
