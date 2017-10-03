@@ -316,6 +316,22 @@
 	font-style: normal;
 }
 
+@font-face {
+	font-family: 'azn';
+	src: url('../fonts/jaznb.woff') format('woff'),
+		url('../fonts/jaznb.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'azn';
+	src: url('../fonts/jaznr.woff') format('woff'),
+		url('../fonts/jaznr.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
 
 /*=====  End of Fonts  ======*/
 
@@ -335,6 +351,9 @@
     font-weight: normal;
     font-style: normal;
 }
+.icon-glyph{
+	vertical-align: middle;
+}
 .icon-glyph:before{
 	display: inline-block;
    font-family: 'Glyphter';
@@ -344,10 +363,11 @@
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale
 }
-.icon-airplane:before{content:'\0041';}
-.icon-full-pack:before{content:'\0042';}
-.icon-hotels:before{content:'\0043';}
-.icon-tours:before{content:'\0044';}
+.icon-custom-full-pack:before{content:'\0041';}
+.icon-custom-hotels:before{content:'\0042';}
+.icon-custom-tours:before{content:'\0043';}
+.icon-custom-airplane:before{content:'\0044';}
+.icon-custom-visa:before{content:'\0045';}
 
 /*=====  End of icon fonts  ======*/
 

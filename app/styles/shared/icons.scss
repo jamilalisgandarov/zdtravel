@@ -30,4 +30,7 @@
     @include icon-generator(24, 24, '../images/icons/icon-search.png');
 }
 
+.icon-arrow-right {
+    @include icon-generator(17, 9, '../images/icons/icon-arrow-right.png');
+}
 /*=====  End of Icons  ======*/

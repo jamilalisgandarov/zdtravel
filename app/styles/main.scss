@@ -36,6 +36,7 @@ button {
     color:$color_gray-title;
     padding-bottom: 15px;
     text-transform: uppercase;
+    z-index: 12;
     &:after{
         content:'';
         position: absolute;
@@ -46,7 +47,9 @@ button {
         background-color: $color_blue;
     }
 }
-
+.icon-azn{
+    font-family: 'azn';
+}
 
 /*=====  End of Common modifications  ======*/
 
@@ -58,6 +61,8 @@ button {
 
 @import './shared/fonts';
 @import './shared/icons';
+@import './shared/form-elements';
+
 
 /*=====  End of Shared imports  ======*/
 
