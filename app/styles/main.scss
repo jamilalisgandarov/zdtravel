@@ -10,6 +10,7 @@
 body{
     font-family:$font_roboto;    
     font-weight: 300;
+    overflow-x: hidden;
 }
 a,
 a:focus,
@@ -49,6 +50,9 @@ button {
 }
 .icon-azn{
     font-family: 'azn';
+}
+b{
+    font-weight: 500;
 }
 
 /*=====  End of Common modifications  ======*/

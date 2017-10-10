@@ -1,0 +1,126 @@
+/*=============================================
+=            Footer            =
+=============================================*/
+
+footer {
+    .footer-content {
+        position: relative;
+        padding-top: 50px;
+        padding-bottom: 100px;
+        background-image: url('../images/footer.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        .content {
+            position: relative;
+            z-index: 2;
+            .brand {
+                margin-bottom: 50px;
+            }
+            .heading {
+                font-family: $font_roboto;
+                font-size: 18px;
+                font-weight: 600;
+                color: #a5a5a5;
+                margin-bottom: 37px;
+            }
+            .adress {
+                ul {
+                    >li {
+                        display: flex;
+                        align-items: center;
+                        i {
+                            margin-right: 20px;
+                            width: 15px;
+                            color: #6a6a6a;
+                        }
+                    }
+                }
+                p.info {
+                    font-family: $font_san-francisco;
+                    font-size: 13px;
+                    font-weight: 400;
+                    color: #a5a5a5;
+                }
+                form {
+                    .input-wrapper {
+                        position: relative;
+                        margin-top: 30px;
+                        input[type='text'] {
+                            font-family: $font_san-francisco;
+                            font-size: 13px;
+                            color: black;
+                            padding: 10px 20px;
+                            background: white;
+                            min-width: 100%;
+                            box-sizing: border-box;
+                        }
+                        button[type='submit'] {
+                            background-color: $color_blue;
+                            width: 40px;
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+                            height: 100%;
+                            background-image: url('../images/icons/check-icon.png');
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            cursor: pointer;
+                            transition: .3s;
+                            &:hover {
+                                background-color: #1e86b3 !important;
+                            }
+                        }
+                    }
+                }
+            }
+            ul {
+                li {
+                    margin-bottom: 20px;
+                    p {
+                        font-family: $font_roboto;
+                        font-size: 13px;
+                        color: #a5a5a5;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, .7);
+            z-index: 1;
+        }
+    }
+    .footer-copyrights {
+        padding: 20px 0;
+        background-color: #030501;
+        text-align: center;
+        .social-networks {
+            ul {
+                li {
+                    display: inline-block;
+                    margin: 0 10px;
+                    a {
+                        font-size: 15px;
+                        color: rgba(256, 256, 256, .3);
+                    }
+                }
+            }
+        }
+        .copyright {
+            margin-top: 10px;
+            font-family: $font_san-francisco;
+            font-size: 11px;
+            color: rgba(256, 256, 256, .3);
+        }
+    }
+}
+
+
+/*=====  End of Footer  ======*/
