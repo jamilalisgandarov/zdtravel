@@ -79,5 +79,22 @@
     }
 }
 
+/*=====  Border Radius  ======*/
+@mixin border-radius($border_radius) {
+    -webkit-border-radius: $border_radius;
+    -moz-border-radius: $border_radius;
+    -ms-border-radius: $border_radius;
+    -o-border-radius: $border_radius;
+    border-radius: $border_radius;
+}
+
+/*=====  Transition  ======*/
+@mixin transition($transition) {
+    -webkit-border-radius: $transition;
+    -moz-border-radius: $transition;
+    -ms-border-radius: $transition;
+    -o-border-radius: $transition;
+    border-radius: $transition;
+}
 
 /*=====  End of Mixins  ======*/

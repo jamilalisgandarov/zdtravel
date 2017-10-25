@@ -1,0 +1,48 @@
+.page-bottom-info {
+    background-color: $color_blue;
+    padding: 27px 0;
+    .page-bottom-info-title {
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 34px;
+        margin: {
+            bottom: 10px;
+        }
+    }
+    .page-bottom-info-desc {
+        color: #fff;
+        font-size: 14px;
+    }
+    .page-bottom-info-form {
+        form {
+            position: relative;
+            input {
+                background-color: #4A4A4A;
+                color: #fff;
+                font-size: 11px;
+                padding: 10px 65px 7px 17px;
+                width: 180px;
+                @include border-radius(32px);
+            }
+            button {
+                background-color: #A3A3A3;
+                color: $color_blue;
+                cursor: pointer;
+                height: 24px;
+                margin: 3px;
+                position: absolute;
+                right: 0;
+                text-align: center;
+                top: 0;
+                width: 24px;
+                @include border-radius(32px);
+                @include transition(all 0.3s);
+                &:hover {
+                    background-color: $color_blue;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

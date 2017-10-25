@@ -1,0 +1,221 @@
+/*=============================================
+=            Yenilikler            =
+=============================================*/
+
+#yenilikler-home {
+    position: relative;
+    background-image: url("/images/yenilikler-home-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    &:after {
+      content: "";
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+    nav {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        padding: {
+            bottom: 17px;
+            top: 17px;
+        }
+        .nav-holder {
+            flex-direction: row;
+            justify-content: space-between;
+            .brand-name {
+                margin: 0;
+            }
+            .menu {
+                > ul {
+                    > li {
+                        a {
+                            margin: 0 0 0 34px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .header-bottom {
+        padding: {
+            bottom: 29px;
+            top: 168px;
+        }
+        .breadcrumb {
+            align-items: center;
+            color: #fff;
+            display: flex;
+            flex-direction: row;
+            font-weight: bold;
+            text-transform: uppercase;
+            span {
+                font-size: 20px;
+                line-height: 23px;
+                &:not(:last-child):after {
+                    content: '/'
+                }
+                &:last-child {
+                    font-size: 90px;
+                    line-height: 105px;
+                    margin: {
+                        left: 19px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#yenilikler-content {
+    background-image: url("/images/yenilikler-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: {
+        bottom: 52px;
+        top: 101px;
+    }
+    .yenilikler-list {
+        list-style: none;
+        margin: 0 0 73px;
+        padding: 0;
+        li {
+            margin: {
+                bottom: 50px;
+            }
+            width: 32%;
+            .yenilikler-card {
+                display: flex;
+                flex-direction: column;
+                .yenilikler-cover {
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    padding: 69% 0 0;
+                    width: 100%;
+                }
+                .yenilikler-info {
+                    background-color: #FBFBFB;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 28px;
+                    .yenilikler-title {
+                        color: #39393A;
+                        font-size: 24px;
+                        font-weight: bold;
+                        line-height: 28px;
+                        margin: {
+                            bottom: 20px;
+                        };
+                    }
+                    .yenilikler-meta {
+                        font-size: 16px;
+                        line-height: 19px;
+                        margin: {
+                            bottom: 22px;
+                        }
+                        .yenilikler-date {
+                            color: #2CA9E0;
+                            font-style: italic;
+                            margin: {
+                                right: 8px;
+                            }
+                            &:after {
+                                color: #4A4A4A;
+                                content: '/';
+                                margin: {
+                                    left: 15px;
+                                }
+                            }
+                        }
+                        .yenilikler-view {
+                            margin: {
+                                right: 12px;
+                            }
+                            span {
+                                margin: {
+                                    left: 5px;
+                                }
+                            }
+                        }
+                        .yenilikler-comment {
+                            span {
+                                margin: {
+                                    left: 5px;
+                                }
+                            }
+                        }
+                    }
+                    .yenilikler-excerpt {
+                        color: #434B56;
+                        font-size: 11px;
+                        line-height: 23px;
+                        margin: {
+                            bottom: 33px;
+                        };
+                        text-align: justify;
+                        text-indent: 32px;
+                    }
+                }
+            }
+            &:first-child {
+                width: 100%;
+                .yenilikler-cover {
+                    padding: 32% 0 0;
+                }
+                .yenilikler-info {
+                    .yenilikler-meta {
+                        font-size: 14px;
+                        line-height: 16px;
+                        margin: {
+                            bottom: 15px;
+                        }
+                    }
+                    .yenilikler-excerpt {
+                        font-size: 14px;
+                        line-height: 24px;
+                        text-indent: 0;
+                    }
+                    .yenilikler-actions {
+                        i {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .yenilikler-pagination {
+        > * {
+            display: inline-block;
+            margin: 0 8px;
+        }
+        > .current-page {
+            color: $color_blue;
+        }
+        > .pagination {
+            border: 1px solid $color_blue;
+            padding: 8px;
+            @include border-radius(32px);
+            @include transition(all 0.3s);
+            &:hover {
+                background-color: $color_blue;
+                color: #fff;
+            }
+        }
+        > .pagination-prev {
+            color: $color_blue;
+            margin: 0 16px 0 0;
+        }
+        > .pagination-next {
+            color: $color_blue;
+            margin: 0 0 0 16px;
+        }
+    }
+}
+
+/*=====  End of Yenilikler  ======*/

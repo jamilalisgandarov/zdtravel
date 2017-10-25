@@ -28,3 +28,31 @@ a.link-style {
         }
     }
 }
+
+.btn-primary {
+    background-color: #4A4A4A;
+    border: none;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 8px 0;
+    text-transform: uppercase;
+    @include border-radius(30px);
+    @include transition(all 0.3s);
+    span {
+        margin: {
+            left: 32px;
+            right: 32px;
+        }
+    }
+    i {
+        margin: {
+            right: 8px;
+        }
+    }
+}
+
+.btn-primary:hover {
+    background-color: $color_blue;
+    color: #fff;
+}
