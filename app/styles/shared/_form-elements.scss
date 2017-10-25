@@ -1,0 +1,98 @@
+a.link-style {
+    display: inline-block;
+    font-family: $font_roboto;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 28px;
+    padding: 5px 15px;
+    border: 2px solid $color_blue;
+    padding-right: 5px;
+    color: $color_blue;
+    letter-spacing: 1px;
+    .arrow {
+        margin-left: 8px;
+        width: 25px;
+        height: 25px;
+        display: inline-block;
+        background: $color_blue;
+        color: white;
+        vertical-align: middle;
+        border-radius: 100%;
+        padding: 2.3px;
+        box-sizing: border-box;
+        vertical-align: middle;
+        font-size: 18px;
+        i {
+            vertical-align: super;
+        }
+    }
+}
+
+.radio-button {
+    label {
+        cursor: pointer;
+        line-height: 16px !important;
+        padding: {
+            left: 24px;
+        }
+        position: relative;
+        user-select: none;
+        &:before {
+            border: 1px solid #fff;
+            content: '';
+            height: 14px;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 14px;
+            @include border-radius(14px);
+        }
+        &:after {
+            background-color: #fff;
+            content: '';
+            display: none;
+            height: 10px;
+            left: 3px;
+            position: absolute;
+            top: 3px;
+            width: 10px;
+            @include border-radius(14px);
+        }
+    }
+    input[type="radio"] {
+        display: none;
+        &:checked + label:after {
+            display: block;
+        }
+    }
+}
+
+.btn-primary {
+    background-color: #4A4A4A;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 8px 0;
+    text-transform: uppercase;
+    @include border-radius(30px);
+    @include transition(all 0.3s);
+    span {
+        margin: {
+            left: 32px;
+            right: 32px;
+        }
+    }
+    i {
+        margin: {
+            right: 8px;
+        }
+    }
+}
+
+.btn-primary:hover {
+    background-color: $color_blue;
+    color: #fff;
+}

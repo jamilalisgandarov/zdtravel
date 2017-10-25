@@ -46,3 +46,31 @@
         }
     }
 }
+
+.page-pagination {
+    > * {
+        display: inline-block;
+        margin: 0 8px;
+    }
+    > .current-page {
+        color: $color_blue;
+    }
+    > .pagination {
+        border: 1px solid $color_blue;
+        padding: 8px;
+        @include border-radius(32px);
+        @include transition(all 0.3s);
+        &:hover {
+            background-color: $color_blue;
+            color: #fff;
+        }
+    }
+    > .pagination-prev {
+        color: $color_blue;
+        margin: 0 16px 0 0;
+    }
+    > .pagination-next {
+        color: $color_blue;
+        margin: 0 0 0 16px;
+    }
+}
