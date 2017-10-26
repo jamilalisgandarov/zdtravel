@@ -1,0 +1,271 @@
+/*=============================================
+=            About Tour            =
+=============================================*/
+
+#about-tour-home {
+    position: relative;
+    background-image: url("/images/yenilikler-home-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    &:after {
+      content: "";
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+    nav {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        padding: {
+            bottom: 17px;
+            top: 17px;
+        }
+        .nav-holder {
+            flex-direction: row;
+            justify-content: space-between;
+            .brand-name {
+                margin: 0;
+            }
+            .menu {
+                > ul {
+                    > li {
+                        a {
+                            margin: 0 0 0 34px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .header-bottom {
+        padding: {
+            bottom: 29px;
+            top: 168px;
+        }
+        .breadcrumb {
+            align-items: center;
+            color: #fff;
+            display: flex;
+            flex-direction: row;
+            font-weight: bold;
+            text-transform: uppercase;
+            span {
+                font-size: 20px;
+                line-height: 23px;
+                &:not(:last-child):after {
+                    content: '/';
+                    margin: 0 8px;
+                }
+                &:last-child {
+                    font-size: 90px;
+                    line-height: 105px;
+                    margin: {
+                        left: 19px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#about-tour-content {
+    background-image: url("/images/yenilikler-bg.png");
+    background-size: cover;
+    background-position: center;
+    
+    #about-tour-details {
+        padding: 64px 0;
+        .about-left {
+            width: 50%;
+            .tour-title {
+                margin-bottom: 12px;
+                h1 {
+                    color: #343942;
+                    font-size: 36px;
+                    font-weight: bold;
+                }
+                .rating {
+                    margin: 0 0 0 12px;
+                    svg {
+                        fill: $color_blue;
+                    }
+                }
+            }
+            .tour-price {
+                color: #343942;
+                font-size: 36px;
+                font-weight: bold;
+                margin-bottom: 24px;
+            }
+            .tour-desc {
+                color: #434B56;
+                font-size: 14px;
+                font-weight: bold;
+                line-height: 24px;
+            }
+        }
+        .about-right {
+            width: 50%;
+            .tour-media {
+                width: 100%;
+                > * {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    
+    #about-tour-features {
+        position: relative;
+        background-image: url("/images/manhattan.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 84px 0;
+        }
+        .tour-feature {
+            width: 14%;
+            .feature-title {
+                color: #fff;
+                font-size: 18px;
+                margin-bottom: 24px;
+            }
+        }
+    }
+
+    #about-tour-timeline {
+        padding: 120px 0 0;
+        .tour-timeline-day {
+            width: 100%;
+            .timeline-day-left {
+                width: 50%;
+                .timeline-day-title {
+                    color: #2CA9E0;
+                    font-size: 36px;
+                    font-weight: bold;
+                    margin-bottom: 8px;
+                    padding-left: 56px;
+                    position: relative;
+                    &:before {
+                        border: 4px solid #EAEAEA;
+                        content: '';
+                        height: 24px;
+                        left: 0;
+                        position: absolute;
+                        top: 0;
+                        width: 24px;
+                        border-radius: 2em;
+                    }
+                }
+                .timeline-day-content {
+                    color: #434B56;
+                    font-size: 14px;
+                    font-weight: bold;
+                    line-height: 24px;
+                    margin-bottom: 8px;
+                    padding-left: 56px;
+                    position: relative;
+                    &:before {
+                        border-left: 4px solid #EAEAEA;
+                        content: '';
+                        height: 100%;
+                        left: 14px;
+                        position: absolute;
+                        top: 0;
+                    }
+                    p {
+                        margin: 40px 0;
+                    }
+                }
+            }
+            .timeline-day-right {
+                margin-left: 32px;
+                width: 50%;
+                .timeline-day-cover {
+                    margin-bottom: 64px;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    #about-tour-order {
+        padding: 64px 0;
+        #order-button {
+            background-color: $color_blue;
+            color: #fff;
+            padding: 4px 4px 4px 32px;
+            @include border-radius(32px);
+            span {
+                font-size: 18px;
+                line-height: 21px;
+                margin-right: 32px;
+            }
+            i {
+                background-color: #fff;
+                color: $color_blue;
+                height: 44px;
+                line-height: 44px;
+                width: 44px;
+                @include border-radius(32px);
+            }
+        }
+    }
+
+    #about-tour-gallery {
+        margin-bottom: 100px;
+        .gallery-title {
+            color: $color_blue;
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 64px;
+            h2 {
+                border-bottom: 4px solid;
+            }
+        }
+        .gallery-content {
+            .gallery-item {
+                background-position: center;
+                background-size: cover;
+                margin-bottom: 3%;
+                padding: 31.33% 0 0;
+                position: relative;
+                width: 31.33%;
+                &:nth-child(2) {
+                    padding: 31.33% 0 0;
+                    position: relative;
+                    width: 65.66%
+                }
+                .overlay {
+                    background-color: rgba(0, 0, 0, 0);
+                    bottom: 0;
+                    color: #fff;
+                    cursor: pointer;
+                    font-size: 48px;
+                    left: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    @include transition(all 0.3s);
+                    i {
+                        transform: scale(0);
+                        @include transition(all 0.3s);
+                    }
+                    &:hover {
+                        background-color: rgba(0, 0, 0, 0.5);
+                        i {
+                            transform: scale(1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
