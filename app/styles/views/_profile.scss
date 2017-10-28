@@ -1,0 +1,257 @@
+/*=============================================
+=            Profile            =
+=============================================*/
+
+#profile-home {
+    position: relative;
+    background-attachment: fixed;
+    background-image: url("/images/yenilikler-home-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    &:after {
+      content: "";
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+    nav {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        padding: {
+            bottom: 17px;
+            top: 17px;
+        }
+        .nav-holder {
+            flex-direction: row;
+            justify-content: space-between;
+            .brand-name {
+                margin: 0;
+            }
+            .menu {
+                > ul {
+                    > li {
+                        a {
+                            margin: 0 0 0 34px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .header-bottom {
+        padding: {
+            top: 168px;
+        }
+        .header-profile {
+            margin-bottom: 24px;
+            .header-profile-image {
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 166px;
+                margin-right: 32px;
+                padding-left: 166px;
+                @include border-radius(100%);
+            }
+            .header-profile-info {
+                justify-content: center;
+                .header-profile-name {
+                    color: #fff;
+                    font-size: 24px;
+                    margin-bottom: 24px;
+                }
+                .header-profile-meta {
+                    color: #ccc;
+                    font-size: 14px;
+                    margin-bottom: 24px;
+                    .header-profile-address {
+                        margin-right: 64px;
+                    }
+                    i {
+                        font-size: 24px;
+                        margin-right: 8px;
+                    }
+                }
+                .header-profile-desc {
+                    color: #ccc;
+                    font-size: 14px;
+                    line-height: 24px;
+                }
+            }
+        }
+        .header-profile-tabs-header {
+            border-top: 1px solid #D8D8D8;
+            .header-profile-tabs {
+                a {
+                    border-bottom: 2px solid transparent;
+                    color: #fff;
+                    font-size: 14px;
+                    font-weight: bold;
+                    margin-right: 64px;
+                    padding: 24px 0 22px;
+                    @include transition(all 0.3s);
+                    &:hover,
+                    &.active {
+                        border-color: $color_blue;
+                        color: $color_blue;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#profile-content {
+    padding-top: 64px;
+    .profile-content-title {
+        margin-bottom: 36px;
+        padding-bottom: 14px;
+        position: relative;
+        &:before {
+            background-color: $color_blue;
+            bottom: 0;
+            content: '';
+            height: 2px;
+            left: 0;
+            position: absolute;
+            width: 116px;
+        }
+        h1 {
+            color: #343942;
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 29px;
+        }
+    }
+    .profile-tours-wrapper {
+        height: 960px;
+        overflow-y: auto;
+        padding-right: 16px;
+        &::-webkit-scrollbar {
+            width: 8px;
+        }
+         
+        &::-webkit-scrollbar-track {
+            
+        }
+         
+        &::-webkit-scrollbar-thumb {
+          background-color: #ccc;
+          outline: none;
+        }
+        #profile-tours-list {
+            margin: {
+                bottom: 38px;
+            }
+            .tour {
+                background-color: rgba(251, 251, 251, 0.5);
+                margin: {
+                    bottom: 30px;
+                }
+                width: 31.33%;
+                @include transition(all 0.3s);
+                &:hover {
+                    background-color: #fff;
+                    @include box-shadow(0 2px 14px rgba(0, 0, 0, 0.1754));
+                }
+                .tour-cover {
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    padding: 69% 0 0;
+                    position: relative;
+                    .tour-cover-overlay {
+                        background-color: rgba(0, 0, 0, 0.5);
+                        bottom: 0;
+                        left: 0;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        .tour-title {
+                            bottom: 0;
+                            left: 0;
+                            padding: 24px 20px;
+                            position: absolute;
+                            right: 0;
+                            h1 {
+                                color: #fff;
+                                float: left;
+                                font-size: 24px;
+                                font-weight: bold;
+                                line-height: 28px;
+                            }
+                            button {
+                                border: 1px solid #fff;
+                                color: #fff;
+                                cursor: pointer;
+                                float: right;
+                                padding: 8px;
+                                @include border-radius(32px);
+                                @include transition(all 0.3s);
+                                &:hover {
+                                    background-color: $color_blue;
+                                    border-color: $color_blue;
+                                }
+                                i {
+                                    text-align: center;
+                                    width: 1em;
+                                }
+                            }
+                        }
+                    }
+                }
+                .tour-info {
+                    .tour-meta {
+                        border-bottom: 1px solid #EAEAEA;
+                        width: 100%;
+                        span {
+                            flex: 1;
+                            font-size: 18px;
+                            line-height: 21px;
+                            padding: 16px;
+                            text-align: center;
+                            &:not(:last-child) {
+                                border-right: 1px solid #EAEAEA;
+                            }
+                        }
+                    }
+                }
+                .tour-content {
+                    padding: 24px;
+                    .tour-excerpt {
+                        color: #434B56;
+                        font-size: 11px;
+                        line-height: 23px;
+                        margin: {
+                            bottom: 10px;
+                        };
+                        text-align: justify;
+                        text-indent: 32px;
+                        width: 100%;
+                    }
+                    .tour-price-date {
+                        margin: {
+                            bottom: 27px;
+                        }
+                        .tour-price {
+                            color: $color_blue;
+                            font-size: 36px;
+                            font-weight: bold;
+                            line-height: 43px;
+                        }
+                        .tour-date {
+                            font-size: 14px;
+                            line-height: 17px;
+                            margin: {
+                                left: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -4,6 +4,7 @@
 
 #turlar-home {
     position: relative;
+    background-attachment: fixed;
     background-image: url("/images/turlar-home-bg.png");
     background-size: cover;
     background-position: center;
@@ -72,8 +73,8 @@
 
 #turlar-content {
     padding: {
-        bottom: 89px;
-        top: 61px;
+        bottom: 90px;
+        top: 64px;
     }
     #turlar-content-inner {
         #turlar-content-left {
@@ -85,9 +86,9 @@
                 background-color: #FBFBFB;
                 border: 1px solid $color_blue;
                 margin: {
-                    bottom: 24px;
+                    bottom: 32px;
                 }
-                padding: 20px 0;
+                padding: 12px 0;
             }
             #order-box {
                 background-color: $color_blue;

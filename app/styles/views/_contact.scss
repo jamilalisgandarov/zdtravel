@@ -1,0 +1,181 @@
+/*=============================================
+=            Contact Tour            =
+=============================================*/
+
+#contact-home {
+    position: relative;
+    background-attachment: fixed;
+    background-image: url("/images/yenilikler-home-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    &:after {
+      content: "";
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+    nav {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        padding: {
+            bottom: 17px;
+            top: 17px;
+        }
+        .nav-holder {
+            flex-direction: row;
+            justify-content: space-between;
+            .brand-name {
+                margin: 0;
+            }
+            .menu {
+                > ul {
+                    > li {
+                        a {
+                            margin: 0 0 0 34px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .header-bottom {
+        padding: {
+            bottom: 29px;
+            top: 168px;
+        }
+        .breadcrumb {
+            align-items: center;
+            color: #fff;
+            display: flex;
+            flex-direction: row;
+            font-weight: bold;
+            text-transform: uppercase;
+            span {
+                font-size: 20px;
+                line-height: 23px;
+                &:not(:last-child):after {
+                    content: '/';
+                    margin: 0 8px;
+                }
+                &:last-child {
+                    font-size: 90px;
+                    line-height: 105px;
+                    margin: {
+                        left: 19px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#contact-content {
+    padding-top: 130px;
+    position: relative;
+    z-index: 3;
+    .contact-box {
+        border: 1px solid $color_blue;
+        @include box-shadow(0 0 16px #ccc);
+        .contact-box-left {
+            background-color: #fff;
+            padding: 32px 128px 32px 32px;
+            width: 60%;
+            .contact-form {
+                .contact-form-title {
+                    color: $color_blue;
+                    font-size: 24px;
+                    font-weight: bold;
+                    margin-bottom: 40px;
+                }
+                .contact-form-input {
+                    margin-bottom: 24px;
+                    > * {
+                        border: 1px solid $color_blue;
+                        padding: 14px;
+                        width: 100%;
+                    }
+                }
+                .contact-form-submit {
+                    button {
+                        background-color: $color_blue;
+                        color: #fff;
+                        cursor: pointer;
+                        font-size: 14px;
+                        padding: 16px 48px 16px 0;
+                        position: relative;
+                        @include border-radius(32px);
+                        @include transition(all 0.3s);
+                        &:hover {
+                            i {
+                                padding: 10px;
+                                right: 6px;
+                                top: 6px;
+                            }
+                        }
+                        span {
+                            float: left;
+                            margin: 0 48px;
+                        }
+                        i {
+                            background-color: #fff;
+                            color: $color_blue;
+                            font-size: 16px;
+                            line-height: 1;
+                            padding: 12px;
+                            position: absolute;
+                            right: 4px;
+                            top: 4px;
+                            text-align: center;
+                            width: 1em;
+                            @include border-radius(32px);
+                            @include transition(all 0.3s);
+                        }
+                    }
+                }
+            }
+        }
+        .contact-box-right {
+            background-color: $color_blue;
+            padding: 32px 0 32px 64px;
+            width: 40%;
+            .contact-form-title {
+                color: #fff;
+                font-size: 24px;
+                font-weight: bold;
+                margin-bottom: 40px;
+            }
+            .contact-info-row {
+                margin-bottom: 64px;
+                .contact-info-icon {
+                    color: #fff;
+                    font-size: 24px;
+                    opacity: 0.5;
+                    margin-right: 32px;
+                }
+                .contact-info-content {
+                    color: #fff;
+                    font-size: 18px;
+                    font-weight: bold;
+                    line-height: 1.5;
+                }
+                &.contact-info-social {
+                    margin: 0;
+                    a {
+                        color: #fff;
+                        opacity: 0.5;
+                        margin: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#contact-footer-map {
+    img {
+        margin: -64px 0 0;
+    }
+}
