@@ -74,6 +74,35 @@ footer {
                         }
                     }
                 }
+                @media screen and (max-width:767px) {
+                    & {
+                        text-align: center;
+                        width: 100%;
+                        ul {
+                            > li {
+                                justify-content: center;
+                            }
+                        }
+                        form {
+                            margin-bottom: 32px;
+                            padding: 0 16px;
+                        }
+                    }   
+                }
+            }
+            .links {
+                @media screen and (max-width: 767px) {
+                    & {
+                        padding: 16px;
+                        width: 50%;
+                        box-sizing: border-box;
+                        a {
+                            img {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
             }
             ul {
                 li {
@@ -122,6 +151,8 @@ footer {
         }
     }
 }
+
+
 
 
 /*=====  End of Footer  ======*/

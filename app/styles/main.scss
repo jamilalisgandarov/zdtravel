@@ -26,8 +26,9 @@ button {
 }
 
 .wrapper{
-    width: $size_wrapper-width;
+    max-width: $size_wrapper-width;
     margin: 0 auto;
+    width: 100%;
 }
 .section-title{
     position: relative;

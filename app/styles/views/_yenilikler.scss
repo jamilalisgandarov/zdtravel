@@ -8,66 +8,6 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    &:after {
-      content: "";
-      background-color: rgba(0, 0, 0, 0.5);
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-    }
-    nav {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-        padding: {
-            bottom: 17px;
-            top: 17px;
-        }
-        .nav-holder {
-            flex-direction: row;
-            justify-content: space-between;
-            .brand-name {
-                margin: 0;
-            }
-            .menu {
-                > ul {
-                    > li {
-                        a {
-                            margin: 0 0 0 34px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    .header-bottom {
-        padding: {
-            bottom: 29px;
-            top: 168px;
-        }
-        .breadcrumb {
-            align-items: center;
-            color: #fff;
-            display: flex;
-            flex-direction: row;
-            font-weight: bold;
-            text-transform: uppercase;
-            span {
-                font-size: 20px;
-                line-height: 23px;
-                &:not(:last-child):after {
-                    content: '/'
-                }
-                &:last-child {
-                    font-size: 90px;
-                    line-height: 105px;
-                    margin: {
-                        left: 19px;
-                    }
-                }
-            }
-        }
-    }
 }
 
 #yenilikler-content {
@@ -83,11 +23,17 @@
         list-style: none;
         margin: 0 0 73px;
         padding: 0;
+        @media screen and (max-width: 767px) {
+            padding: 0 16px;
+        }
         li {
             margin: {
                 bottom: 50px;
             }
             width: 32%;
+            @media screen and (max-width: 767px) {
+                width: 100%;
+            }
             .yenilikler-card {
                 display: flex;
                 flex-direction: column;
@@ -97,6 +43,9 @@
                     background-size: cover;
                     padding: 69% 0 0;
                     width: 100%;
+                    @media screen and (max-width: 767px) {
+                        padding: 69% 0 0 !important;
+                    }
                 }
                 .yenilikler-info {
                     background-color: #FBFBFB;

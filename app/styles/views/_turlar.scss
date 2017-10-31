@@ -9,66 +9,6 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    &:after {
-      content: "";
-      background-color: rgba(0, 0, 0, 0.5);
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-    }
-    nav {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-        padding: {
-            bottom: 17px;
-            top: 17px;
-        }
-        .nav-holder {
-            flex-direction: row;
-            justify-content: space-between;
-            .brand-name {
-                margin: 0;
-            }
-            .menu {
-                > ul {
-                    > li {
-                        a {
-                            margin: 0 0 0 34px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    .header-bottom {
-        padding: {
-            bottom: 29px;
-            top: 168px;
-        }
-        .breadcrumb {
-            align-items: center;
-            color: #fff;
-            display: flex;
-            flex-direction: row;
-            font-weight: bold;
-            text-transform: uppercase;
-            span {
-                font-size: 20px;
-                line-height: 23px;
-                &:not(:last-child):after {
-                    content: '/'
-                }
-                &:last-child {
-                    font-size: 90px;
-                    line-height: 105px;
-                    margin: {
-                        left: 19px;
-                    }
-                }
-            }
-        }
-    }
 }
 
 #turlar-content {
@@ -79,9 +19,14 @@
     #turlar-content-inner {
         #turlar-content-left {
             margin: {
-                right: 28px;
+                right: 2%;
             }
-            width: 33.33%;
+            width: 31.33%;
+            @media screen and (max-width: 767px) {
+                margin: 0;
+                padding: 0 16px;
+                width: 100%;
+            }
             #search-result {
                 background-color: #FBFBFB;
                 border: 1px solid $color_blue;
@@ -188,7 +133,7 @@
                                 right: 4px;
                                 top: 4px;
                                 text-align: center;
-                                width: 1em;
+                                width: 2.5em;
                                 @include border-radius(32px);
                                 @include transition(all 0.3s);
                             }
@@ -260,10 +205,28 @@
         }
         #turlar-content-right {
             width: 66.66%;
+            @media screen and (max-width: 767px) {
+                padding: 0 16px;
+                width: 100%;
+            }
             #tours-filter {
                 font-size: 14px;
                 margin: {
                     bottom: 32px;
+                }
+                @media screen and (max-width: 767px) {
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    > span {
+                        width: 100%;
+                    }
+                    > select {
+                        margin: 8px 0 !important;
+                        max-width: 31%;
+                    }
+                    > button {
+                        display: none;
+                    }
                 }
                 select {
                     background-color: #FBFBFB;
@@ -299,6 +262,9 @@
                     &:hover {
                         background-color: #fff;
                         @include box-shadow(0 2px 14px rgba(0, 0, 0, 0.1754));
+                    }
+                    @media screen and (max-width: 767px) {
+                        width: 100%;
                     }
                     .tour-cover {
                         background-position: center;
