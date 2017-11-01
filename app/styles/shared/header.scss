@@ -318,6 +318,7 @@ header {
             display: flex;
             flex-direction: row;
             font-weight: bold;
+            flex-wrap: wrap;
             text-transform: uppercase;
             span {
                 font-size: 20px;

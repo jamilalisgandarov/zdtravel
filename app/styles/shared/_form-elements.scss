@@ -96,3 +96,36 @@ a.link-style {
     background-color: $color_blue;
     color: #fff;
 }
+
+.primary-button {
+    background-color: $color_blue;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 16px 48px 16px 0;
+    position: relative;
+    @include border-radius(32px);
+    @include transition(all 0.3s);
+    span {
+        float: left;
+        margin: 0 48px;
+    }
+    i {
+        background-color: #fff;
+        color: $color_blue;
+        font-size: 16px;
+        line-height: 1;
+        padding: 12px;
+        position: absolute;
+        right: 4px;
+        top: 4px;
+        text-align: center;
+        width: 2.5em;
+        @include border-radius(32px);
+        @include transition(all 0.3s);
+        &:hover {
+            background-color: $color_blue;
+            color: #fff;
+        }
+    }
+}

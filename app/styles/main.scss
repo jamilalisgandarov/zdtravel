@@ -30,25 +30,6 @@ button {
     margin: 0 auto;
     width: 100%;
 }
-.section-title{
-    position: relative;
-    font-size: 30px;
-    font-family: $font_san-francisco;
-    font-weight: bold;
-    color:$color_gray-title;
-    padding-bottom: 15px;
-    text-transform: uppercase;
-    z-index: 12;
-    &:after{
-        content:'';
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        height: 2px;
-        width: 130px;
-        background-color: $color_blue;
-    }
-}
 .icon-azn{
     font-family: 'azn';
 }

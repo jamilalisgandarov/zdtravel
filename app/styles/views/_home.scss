@@ -9,15 +9,6 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  &:after {
-    content: "";
-    background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-  }
   .search-orders {
     position: relative;
     z-index: 2;
@@ -137,6 +128,9 @@
   position: relative;
   margin-top: 80px;
   padding-bottom: 80px;
+  @media screen and (max-width: 767px) {
+    padding: 48px 16px;
+  }
   .service-holder {
     .service-list {
       position: relative;
@@ -145,6 +139,9 @@
       .service {
         margin: 0 25px;
         transition: 0.3s linear;
+        @media screen and (max-width: 767px) {
+          width: 100%;
+        }
         .service-title {
           font-size: 17.3px;
           color: #9fa3a8;
@@ -164,10 +161,16 @@
           line-height: 90px;
           color: #9fa3a8;
           transition: 0.3s linear;
+          @media screen and (max-width: 767px) {
+            margin: 0 auto 16px;
+          }
         }
         &:hover {
           transform: scale(1.6);
           color: $color_blue;
+          @media screen and (max-width: 767px) {
+            transform: scale(1);
+          }
           .service-title {
             color: $color_blue;
           }
@@ -189,21 +192,9 @@
       color: rgb(67, 74, 84);
       line-height: 1.55;
       font-weight: 400;
-      a {
+      .primary-button {
         margin-top: 70px;
       }
-    }
-    &:after {
-      content: "";
-      width: 80%;
-      position: absolute;
-      height: 100%;
-      background-image: url(../images/map.png);
-      background-position: center;
-      background-repeat: no-repeat;
-      left: 13%;
-      z-index: 1;
-      top: 0;
     }
   }
 }
@@ -213,119 +204,14 @@
   background-image: url("../images/background2.png");
   min-height: 500px;
   padding: 80px 0;
+  @media screen and (max-width: 767px) {
+    padding: 64px 16px;
+  }
   .tours-list {
     margin-top: 80px;
-    .tour {
+    .tour-card {
       background-color: white;
-      .tour-preview {
-        position: relative;
-        height: 243px;
-        .img {
-          position: absolute;
-          left: 0;
-          top: 0;
-          width: 100%;
-          height: 100%;
-          background-position: center;
-          background-size: cover;
-        }
-        .preview {
-          position: relative;
-          padding: 15px;
-          box-sizing: border-box;
-          height: 100%;
-          background-image: -webkit-linear-gradient(
-            90deg,
-            rgba(0, 0, 0, 0.6) 0%,
-            rgba(0, 0, 0, 0) 100%
-          );
-          box-sizing: border-box;
-          .title {
-            font-family: $font_roboto;
-            text-transform: uppercase;
-            color: white;
-            font-size: 24px;
-            font-weight: 400;
-          }
-        }
-      }
-      .tour-desc {
-        .tour-details {
-          border-bottom: 1px solid lightgray;
-          .detail {
-            width: calc(100%/3);
-            text-align: center;
-            color: #909090;
-            padding: 15px 0;
-            border-right: 1px solid lightgray;
-            i {
-              font-size: 17px;
-            }
-            span.count {
-              font-weight: 500;
-              vertical-align: bottom;
-              font-size: 15px;
-            }
-            &:last-child {
-              border-right: none;
-            }
-          }
-        }
-        .main-desc {
-          padding-top: 50px;
-          padding-bottom: 30px;
-          text-align: center;
-          .pricing {
-            text-align: center;
-            margin-bottom: 30px;
-            .price {
-              color: $color_blue;
-              font-size: 42px;
-              span {
-                font-weight: 500;
-                vertical-align: text-bottom;
-              }
-              i.icon-azn {
-                font-size: 30px;
-                vertical-align: middle;
-              }
-            }
-            .duration {
-              color: #6f6f6f;
-              font-weight: bold;
-              font-size: 13px;
-              margin-left: 10px;
-              position: relative;
-              bottom: -2px;
-            }
-          }
-          .desc {
-            font-family: $font_roboto;
-            font-weight: 400;
-            font-size: 12.4px;
-            color: #4e4e4e;
-            line-height: 15px;
-          }
-          .more {
-            margin-top: 40px;
-            a {
-              display: inline-block;
-              font-weight: 500;
-              border-radius: 28px;
-              padding: 10px 15px;
-              font-size: 12px;
-              font-weight: 500;
-              font-family: "Roboto";
-              text-transform: uppercase;
-              background-color: #4c4c4c;
-              color: white;
-              i {
-                margin-left: 20px;
-              }
-            }
-          }
-        }
-      }
+      width: 100%;
     }
     .owl-nav {
       margin-top: 20px;
@@ -389,6 +275,10 @@
     .explore-content {
       width: 35%;
       font-family: $font_san-francisco;
+      @media screen and (max-width: 767px) {
+        padding: 0 16px;
+        width: 100%;
+      }
       .title {
         font-size: 56px;
         line-height: 75px;
@@ -419,6 +309,9 @@
       right: 110px;
       bottom: -70px;
       width: 50%;
+      @media screen and (max-width: 767px) {
+        width: 100%;
+      }
       .slick-list {
         overflow: visible;
         .slick-slide {
@@ -482,11 +375,18 @@
 
 #suggested-hotels {
   padding-top: 160px;
+  @media screen and (max-width: 767px) {
+    padding: 160px 16px 0;
+  }
   .otels-list {
     margin-top: 60px;
     .otel {
       width: calc((100% - 34px)/2);
       margin-bottom: 34px;
+      @media screen and (max-width: 767px) {
+        flex-wrap: wrap;
+        width: 100%;
+      }
       .otel-img {
         position: relative;
         height: 264px;
@@ -494,6 +394,9 @@
         background-size: cover;
         background-position: center;
         flex-shrink: 0;
+        @media screen and (max-width: 767px) {
+          width: 100%;
+        }
         .img-preview {
           position: relative;
           height: 100%;
@@ -549,6 +452,9 @@
       .otel-desc {
         padding: 25px 30px;
         box-sizing: border-box;
+        @media screen and (max-width: 767px) {
+          flex: 1;
+        }
         .pricing {
           font-family: $font_san-francisco;
           .price {
@@ -624,6 +530,9 @@
   background-position: center;
   padding: 75px 0;
   box-sizing: border-box;
+  @media screen and (max-width: 767px) {
+    height: auto;
+  }
   .section-content {
     position: relative;
     z-index: 3;
@@ -631,6 +540,11 @@
       width: 33%;
       color: white;
       height: 100%;
+      @media screen and (max-width: 767px) {
+        padding: 0 16px;
+        text-align: center;
+        width: 100%;
+      }
       .heading {
         display: inline-block;
         font-family: $font_san-francisco;
@@ -652,12 +566,19 @@
         text-align: left;
         font-weight: 200;
         letter-spacing: 0.5px;
+        @media screen and (max-width: 767px) {
+          margin: 32px 0 0;
+          text-align: center;
+        }
       }
     }
     .review-list {
       width: 60%;
       position: relative;
       z-index: 3;
+      @media screen and (max-width: 767px) {
+        width: 100%;
+      }
       .reviews {
         bottom: -70px;
         .owl-stage {

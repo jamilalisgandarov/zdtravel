@@ -252,115 +252,115 @@
                 margin: {
                     bottom: 38px;
                 }
-                .tour {
-                    background-color: rgba(251, 251, 251, 0.5);
-                    margin: {
-                        bottom: 30px;
-                    }
-                    width: 48%;
-                    @include transition(all 0.3s);
-                    &:hover {
-                        background-color: #fff;
-                        @include box-shadow(0 2px 14px rgba(0, 0, 0, 0.1754));
-                    }
-                    @media screen and (max-width: 767px) {
-                        width: 100%;
-                    }
-                    .tour-cover {
-                        background-position: center;
-                        background-repeat: no-repeat;
-                        background-size: cover;
-                        padding: 69% 0 0;
-                        position: relative;
-                        .tour-cover-overlay {
-                            background-color: rgba(0, 0, 0, 0.5);
-                            bottom: 0;
-                            left: 0;
-                            position: absolute;
-                            right: 0;
-                            top: 0;
-                            .tour-title {
-                                bottom: 0;
-                                left: 0;
-                                padding: 24px 20px;
-                                position: absolute;
-                                right: 0;
-                                h1 {
-                                    color: #fff;
-                                    float: left;
-                                    font-size: 24px;
-                                    font-weight: bold;
-                                    line-height: 28px;
-                                }
-                                button {
-                                    border: 1px solid #fff;
-                                    color: #fff;
-                                    cursor: pointer;
-                                    float: right;
-                                    padding: 8px;
-                                    @include border-radius(32px);
-                                    @include transition(all 0.3s);
-                                    &:hover {
-                                        background-color: $color_blue;
-                                        border-color: $color_blue;
-                                    }
-                                    i {
-                                        text-align: center;
-                                        width: 1em;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    .tour-info {
-                        .tour-meta {
-                            border-bottom: 1px solid #EAEAEA;
-                            width: 100%;
-                            span {
-                                flex: 1;
-                                font-size: 18px;
-                                line-height: 21px;
-                                padding: 16px;
-                                text-align: center;
-                                &:not(:last-child) {
-                                    border-right: 1px solid #EAEAEA;
-                                }
-                            }
-                        }
-                    }
-                    .tour-content {
-                        padding: 24px;
-                        .tour-excerpt {
-                            color: #434B56;
-                            font-size: 11px;
-                            line-height: 23px;
-                            margin: {
-                                bottom: 10px;
-                            };
-                            text-align: justify;
-                            text-indent: 32px;
-                            width: 100%;
-                        }
-                        .tour-price-date {
-                            margin: {
-                                bottom: 27px;
-                            }
-                            .tour-price {
-                                color: $color_blue;
-                                font-size: 36px;
-                                font-weight: bold;
-                                line-height: 43px;
-                            }
-                            .tour-date {
-                                font-size: 14px;
-                                line-height: 17px;
-                                margin: {
-                                    left: 16px;
-                                }
-                            }
-                        }
-                    }
-                }
+                // .tour {
+                //     background-color: rgba(251, 251, 251, 0.5);
+                //     margin: {
+                //         bottom: 30px;
+                //     }
+                //     width: 48%;
+                //     @include transition(all 0.3s);
+                //     &:hover {
+                //         background-color: #fff;
+                //         @include box-shadow(0 2px 14px rgba(0, 0, 0, 0.1754));
+                //     }
+                //     @media screen and (max-width: 767px) {
+                //         width: 100%;
+                //     }
+                //     .tour-cover {
+                //         background-position: center;
+                //         background-repeat: no-repeat;
+                //         background-size: cover;
+                //         padding: 69% 0 0;
+                //         position: relative;
+                //         .tour-cover-overlay {
+                //             background-color: rgba(0, 0, 0, 0.5);
+                //             bottom: 0;
+                //             left: 0;
+                //             position: absolute;
+                //             right: 0;
+                //             top: 0;
+                //             .tour-title {
+                //                 bottom: 0;
+                //                 left: 0;
+                //                 padding: 24px 20px;
+                //                 position: absolute;
+                //                 right: 0;
+                //                 h1 {
+                //                     color: #fff;
+                //                     float: left;
+                //                     font-size: 24px;
+                //                     font-weight: bold;
+                //                     line-height: 28px;
+                //                 }
+                //                 button {
+                //                     border: 1px solid #fff;
+                //                     color: #fff;
+                //                     cursor: pointer;
+                //                     float: right;
+                //                     padding: 8px;
+                //                     @include border-radius(32px);
+                //                     @include transition(all 0.3s);
+                //                     &:hover {
+                //                         background-color: $color_blue;
+                //                         border-color: $color_blue;
+                //                     }
+                //                     i {
+                //                         text-align: center;
+                //                         width: 1em;
+                //                     }
+                //                 }
+                //             }
+                //         }
+                //     }
+                //     .tour-info {
+                //         .tour-meta {
+                //             border-bottom: 1px solid #EAEAEA;
+                //             width: 100%;
+                //             span {
+                //                 flex: 1;
+                //                 font-size: 18px;
+                //                 line-height: 21px;
+                //                 padding: 16px;
+                //                 text-align: center;
+                //                 &:not(:last-child) {
+                //                     border-right: 1px solid #EAEAEA;
+                //                 }
+                //             }
+                //         }
+                //     }
+                //     .tour-content {
+                //         padding: 24px;
+                //         .tour-excerpt {
+                //             color: #434B56;
+                //             font-size: 11px;
+                //             line-height: 23px;
+                //             margin: {
+                //                 bottom: 10px;
+                //             };
+                //             text-align: justify;
+                //             text-indent: 32px;
+                //             width: 100%;
+                //         }
+                //         .tour-price-date {
+                //             margin: {
+                //                 bottom: 27px;
+                //             }
+                //             .tour-price {
+                //                 color: $color_blue;
+                //                 font-size: 36px;
+                //                 font-weight: bold;
+                //                 line-height: 43px;
+                //             }
+                //             .tour-date {
+                //                 font-size: 14px;
+                //                 line-height: 17px;
+                //                 margin: {
+                //                     left: 16px;
+                //                 }
+                //             }
+                //         }
+                //     }
+                // }
             }
         }
     }
