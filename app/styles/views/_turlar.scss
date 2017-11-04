@@ -15,6 +15,14 @@
     padding: {
         bottom: 90px;
         top: 64px;
+        left: 16px;
+        right: 16px;
+    }
+    @media screen and (max-width: 767px) {
+        padding: {
+            left: 0;
+            right: 0;
+        }
     }
     #turlar-content-inner {
         #turlar-content-left {
@@ -67,76 +75,6 @@
                             font-size: 13px;
                             font-weight: bold;
                             line-height: 15px;
-                        }
-                        .standart-input {
-                            margin: {
-                                bottom: 32px;
-                            }
-                            width: 100%;
-                            &.half-input {
-                                width: 49%;
-                            }
-                            label {
-                                margin: {
-                                    bottom: 12px;
-                                }
-                            }
-                            .form-input {
-                                position: relative;
-                                width: 100%;
-                                input {
-                                    background-color: #fff;
-                                    font-size: 14px;
-                                    padding: 14px 44px 14px 14px;
-                                    width: 100%;
-                                    @include box-sizing(border-box);
-                                }
-                                .input-icon {
-                                    color: $color_blue;
-                                    position: absolute;
-                                    right: 14px;
-                                    top: 14px;
-                                    font-size: 16px;
-                                }
-                            }
-                        }
-                        .input-group {
-                            width: 100%;
-                        }
-                        #search-button {
-                            background-color: #fff;
-                            color: $color_blue;
-                            cursor: pointer;
-                            font-size: 14px;
-                            padding: 16px 48px 16px 0;
-                            position: relative;
-                            @include border-radius(32px);
-                            @include transition(all 0.3s);
-                            &:hover {
-                                i {
-                                    padding: 10px;
-                                    right: 6px;
-                                    top: 6px;
-                                }
-                            }
-                            span {
-                                float: left;
-                                margin: 0 48px;
-                            }
-                            i {
-                                background-color: $color_blue;
-                                color: #fff;
-                                font-size: 16px;
-                                line-height: 1;
-                                padding: 12px;
-                                position: absolute;
-                                right: 4px;
-                                top: 4px;
-                                text-align: center;
-                                width: 2.5em;
-                                @include border-radius(32px);
-                                @include transition(all 0.3s);
-                            }
                         }
                     }
                 }
@@ -192,12 +130,69 @@
                                 .badge {
                                     float: right;
                                 }
+                                .rating {
+                                    justify-content: flex-start;
+                                    svg {
+                                        fill: $color_blue !important;
+                                        height: 16px;
+                                    }
+                                    .star-empty {
+                                        display: none;
+                                    }
+                                    .star-half {
+                                        display: none;
+                                    }
+                                }
                             }
                             input:checked + label {
                                 &:after {
                                     display: block;
                                 }
                             }
+                        }
+                    }
+                }
+            }
+            #price-range {
+                #slider-range {
+                    background: #eee;
+                    border: none;
+                    margin: {
+                        left: 16px;
+                        right: 16px;
+                        top: 54px;
+                    }
+                    @include border-radius(16px);
+                    .ui-widget-header {
+                        background: $color_blue;
+                    }
+                    .ui-state-default {
+                        background: rgb(255, 255, 255) !important;
+                        border: none;
+                        @include box-shadow(rgb(204, 204, 204) 1px 1px 1px);
+                        @include border-radius(16px);
+                    }
+                    .range-tooltip {
+                        background: #333;
+                        color: #fff;
+                        font-size: 14px;
+                        left: 50%;
+                        min-width: 32px;
+                        padding: 0.25rem;
+                        position: absolute;
+                        text-align: center;
+                        top: -32px;
+                        border-radius: 0.25rem;
+                        transform: translateX(-50%);
+                        &:before {
+                            border-color: #333 transparent transparent;
+                            border-style: solid;
+                            border-width: 0.5rem 0.5rem 0;
+                            content: '';
+                            position: absolute;
+                            top: 100%;
+                            left: 50%;
+                            transform: translateX(-50%);
                         }
                     }
                 }
@@ -252,115 +247,6 @@
                 margin: {
                     bottom: 38px;
                 }
-                // .tour {
-                //     background-color: rgba(251, 251, 251, 0.5);
-                //     margin: {
-                //         bottom: 30px;
-                //     }
-                //     width: 48%;
-                //     @include transition(all 0.3s);
-                //     &:hover {
-                //         background-color: #fff;
-                //         @include box-shadow(0 2px 14px rgba(0, 0, 0, 0.1754));
-                //     }
-                //     @media screen and (max-width: 767px) {
-                //         width: 100%;
-                //     }
-                //     .tour-cover {
-                //         background-position: center;
-                //         background-repeat: no-repeat;
-                //         background-size: cover;
-                //         padding: 69% 0 0;
-                //         position: relative;
-                //         .tour-cover-overlay {
-                //             background-color: rgba(0, 0, 0, 0.5);
-                //             bottom: 0;
-                //             left: 0;
-                //             position: absolute;
-                //             right: 0;
-                //             top: 0;
-                //             .tour-title {
-                //                 bottom: 0;
-                //                 left: 0;
-                //                 padding: 24px 20px;
-                //                 position: absolute;
-                //                 right: 0;
-                //                 h1 {
-                //                     color: #fff;
-                //                     float: left;
-                //                     font-size: 24px;
-                //                     font-weight: bold;
-                //                     line-height: 28px;
-                //                 }
-                //                 button {
-                //                     border: 1px solid #fff;
-                //                     color: #fff;
-                //                     cursor: pointer;
-                //                     float: right;
-                //                     padding: 8px;
-                //                     @include border-radius(32px);
-                //                     @include transition(all 0.3s);
-                //                     &:hover {
-                //                         background-color: $color_blue;
-                //                         border-color: $color_blue;
-                //                     }
-                //                     i {
-                //                         text-align: center;
-                //                         width: 1em;
-                //                     }
-                //                 }
-                //             }
-                //         }
-                //     }
-                //     .tour-info {
-                //         .tour-meta {
-                //             border-bottom: 1px solid #EAEAEA;
-                //             width: 100%;
-                //             span {
-                //                 flex: 1;
-                //                 font-size: 18px;
-                //                 line-height: 21px;
-                //                 padding: 16px;
-                //                 text-align: center;
-                //                 &:not(:last-child) {
-                //                     border-right: 1px solid #EAEAEA;
-                //                 }
-                //             }
-                //         }
-                //     }
-                //     .tour-content {
-                //         padding: 24px;
-                //         .tour-excerpt {
-                //             color: #434B56;
-                //             font-size: 11px;
-                //             line-height: 23px;
-                //             margin: {
-                //                 bottom: 10px;
-                //             };
-                //             text-align: justify;
-                //             text-indent: 32px;
-                //             width: 100%;
-                //         }
-                //         .tour-price-date {
-                //             margin: {
-                //                 bottom: 27px;
-                //             }
-                //             .tour-price {
-                //                 color: $color_blue;
-                //                 font-size: 36px;
-                //                 font-weight: bold;
-                //                 line-height: 43px;
-                //             }
-                //             .tour-date {
-                //                 font-size: 14px;
-                //                 line-height: 17px;
-                //                 margin: {
-                //                     left: 16px;
-                //                 }
-                //             }
-                //         }
-                //     }
-                // }
             }
         }
     }

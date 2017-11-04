@@ -23,6 +23,7 @@
     <!-- endbuild -->
 
     <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
 
@@ -74,7 +75,11 @@
                             <img src="./images/logo.png" alt="ZD Travel">
                         </div>
                         <div class="menu">
-                            <span class="menu-button">MENYU</span>
+                            <div id="hamburger-button">
+                                <span class="line"></span>
+                                <span class="line"></span>
+                                <span class="line"></span>
+                            </div>
                             <ul>
                                 <li>
                                     <a href="" class='dropdown'>ana səhifə</a>
@@ -154,7 +159,7 @@
                                     </div>
                                 </div>
                                 <div class="input-group flex flex-center">
-                                    <button id="search-button">
+                                    <button class="search-button">
                                         <span>Axtar</span>
                                         <i class="fa fa-long-arrow-right"></i>
                                     </button>
@@ -237,7 +242,7 @@
                             <h2>QİYMƏT ARALIĞI</h2>
                         </div>
                         <div class="sidebar-widget-content">
-                            
+                            <div id="slider-range"></div>
                         </div>
                     </section>
                     <section id="rating" class="sidebar-widget">
@@ -246,6 +251,343 @@
                         </div>
                         <div class="sidebar-widget-content">
                             
+                            <div class="radio-list">
+                                <div class="radio-button">
+                                    <input id="five-star" type="radio" checked name="tours">
+                                    <label for="five-star">
+                                        <div class="rating  star-svg value-5">
+                                            <div class="star-container">
+                                                <span class="star">
+                                                    <svg class="star-empty">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-empty"></use>
+                                                    </svg>
+                                                    <svg class="star-half">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-half"></use>
+                                                    </svg>
+                                                    <svg class="star-filled">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-filled"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="star">
+                                                    <svg class="star-empty">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-empty"></use>
+                                                    </svg>
+                                                    <svg class="star-half">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-half"></use>
+                                                    </svg>
+                                                    <svg class="star-filled">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-filled"></use>
+                                                    </svg>
+                                                </span>
+                
+                                                <span class="star">
+                                                    <svg class="star-empty">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-empty"></use>
+                                                    </svg>
+                                                    <svg class="star-half">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-half"></use>
+                                                    </svg>
+                                                    <svg class="star-filled">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-filled"></use>
+                                                    </svg>
+                                                </span>
+                
+                                                <span class="star">
+                                                    <svg class="star-empty">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-empty"></use>
+                                                    </svg>
+                                                    <svg class="star-half">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-half"></use>
+                                                    </svg>
+                                                    <svg class="star-filled">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-filled"></use>
+                                                    </svg>
+                                                </span>
+                
+                                                <span class="star">
+                                                    <svg class="star-empty">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-empty"></use>
+                                                    </svg>
+                                                    <svg class="star-half">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-half"></use>
+                                                    </svg>
+                                                    <svg class="star-filled">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-filled"></use>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="radio-button">
+                                    <input id="four-star" type="radio" name="tours">
+                                    <label for="four-star">
+                                        <div class="rating  star-svg value-4">
+                                            <div class="star-container">
+                                                <span class="star">
+                                                    <svg class="star-empty">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-empty"></use>
+                                                    </svg>
+                                                    <svg class="star-half">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-half"></use>
+                                                    </svg>
+                                                    <svg class="star-filled">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-filled"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="star">
+                                                    <svg class="star-empty">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-empty"></use>
+                                                    </svg>
+                                                    <svg class="star-half">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-half"></use>
+                                                    </svg>
+                                                    <svg class="star-filled">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-filled"></use>
+                                                    </svg>
+                                                </span>
+                
+                                                <span class="star">
+                                                    <svg class="star-empty">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-empty"></use>
+                                                    </svg>
+                                                    <svg class="star-half">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-half"></use>
+                                                    </svg>
+                                                    <svg class="star-filled">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-filled"></use>
+                                                    </svg>
+                                                </span>
+                
+                                                <span class="star">
+                                                    <svg class="star-empty">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-empty"></use>
+                                                    </svg>
+                                                    <svg class="star-half">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-half"></use>
+                                                    </svg>
+                                                    <svg class="star-filled">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-filled"></use>
+                                                    </svg>
+                                                </span>
+                
+                                                <span class="star">
+                                                    <svg class="star-empty">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-empty"></use>
+                                                    </svg>
+                                                    <svg class="star-half">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-half"></use>
+                                                    </svg>
+                                                    <svg class="star-filled">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-filled"></use>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="radio-button">
+                                    <input id="three-star" type="radio" name="tours">
+                                    <label for="three-star">
+                                        <div class="rating  star-svg value-3">
+                                            <div class="star-container">
+                                                <span class="star">
+                                                    <svg class="star-empty">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-empty"></use>
+                                                    </svg>
+                                                    <svg class="star-half">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-half"></use>
+                                                    </svg>
+                                                    <svg class="star-filled">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-filled"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="star">
+                                                    <svg class="star-empty">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-empty"></use>
+                                                    </svg>
+                                                    <svg class="star-half">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-half"></use>
+                                                    </svg>
+                                                    <svg class="star-filled">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-filled"></use>
+                                                    </svg>
+                                                </span>
+                
+                                                <span class="star">
+                                                    <svg class="star-empty">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-empty"></use>
+                                                    </svg>
+                                                    <svg class="star-half">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-half"></use>
+                                                    </svg>
+                                                    <svg class="star-filled">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-filled"></use>
+                                                    </svg>
+                                                </span>
+                
+                                                <span class="star">
+                                                    <svg class="star-empty">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-empty"></use>
+                                                    </svg>
+                                                    <svg class="star-half">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-half"></use>
+                                                    </svg>
+                                                    <svg class="star-filled">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-filled"></use>
+                                                    </svg>
+                                                </span>
+                
+                                                <span class="star">
+                                                    <svg class="star-empty">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-empty"></use>
+                                                    </svg>
+                                                    <svg class="star-half">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-half"></use>
+                                                    </svg>
+                                                    <svg class="star-filled">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-filled"></use>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="radio-button">
+                                    <input id="two-star" type="radio" name="tours">
+                                    <label for="two-star">
+                                        <div class="rating  star-svg value-2">
+                                            <div class="star-container">
+                                                <span class="star">
+                                                    <svg class="star-empty">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-empty"></use>
+                                                    </svg>
+                                                    <svg class="star-half">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-half"></use>
+                                                    </svg>
+                                                    <svg class="star-filled">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-filled"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="star">
+                                                    <svg class="star-empty">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-empty"></use>
+                                                    </svg>
+                                                    <svg class="star-half">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-half"></use>
+                                                    </svg>
+                                                    <svg class="star-filled">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-filled"></use>
+                                                    </svg>
+                                                </span>
+                
+                                                <span class="star">
+                                                    <svg class="star-empty">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-empty"></use>
+                                                    </svg>
+                                                    <svg class="star-half">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-half"></use>
+                                                    </svg>
+                                                    <svg class="star-filled">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-filled"></use>
+                                                    </svg>
+                                                </span>
+                
+                                                <span class="star">
+                                                    <svg class="star-empty">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-empty"></use>
+                                                    </svg>
+                                                    <svg class="star-half">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-half"></use>
+                                                    </svg>
+                                                    <svg class="star-filled">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-filled"></use>
+                                                    </svg>
+                                                </span>
+                
+                                                <span class="star">
+                                                    <svg class="star-empty">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-empty"></use>
+                                                    </svg>
+                                                    <svg class="star-half">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-half"></use>
+                                                    </svg>
+                                                    <svg class="star-filled">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-filled"></use>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="radio-button">
+                                    <input id="one-star" type="radio" name="tours">
+                                    <label for="one-star">
+                                        <div class="rating  star-svg value-1">
+                                            <div class="star-container">
+                                                <span class="star">
+                                                    <svg class="star-empty">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-empty"></use>
+                                                    </svg>
+                                                    <svg class="star-half">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-half"></use>
+                                                    </svg>
+                                                    <svg class="star-filled">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-filled"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="star">
+                                                    <svg class="star-empty">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-empty"></use>
+                                                    </svg>
+                                                    <svg class="star-half">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-half"></use>
+                                                    </svg>
+                                                    <svg class="star-filled">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-filled"></use>
+                                                    </svg>
+                                                </span>
+                
+                                                <span class="star">
+                                                    <svg class="star-empty">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-empty"></use>
+                                                    </svg>
+                                                    <svg class="star-half">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-half"></use>
+                                                    </svg>
+                                                    <svg class="star-filled">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-filled"></use>
+                                                    </svg>
+                                                </span>
+                
+                                                <span class="star">
+                                                    <svg class="star-empty">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-empty"></use>
+                                                    </svg>
+                                                    <svg class="star-half">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-half"></use>
+                                                    </svg>
+                                                    <svg class="star-filled">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-filled"></use>
+                                                    </svg>
+                                                </span>
+                
+                                                <span class="star">
+                                                    <svg class="star-empty">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-empty"></use>
+                                                    </svg>
+                                                    <svg class="star-half">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-half"></use>
+                                                    </svg>
+                                                    <svg class="star-filled">
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/star-rating.icons.svg#star-filled"></use>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
                         </div>
                     </section>
                 </div>
@@ -644,6 +986,7 @@
     <!-- endbuild -->
 
     <!-- build:js scripts/main.js -->
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
 </body>

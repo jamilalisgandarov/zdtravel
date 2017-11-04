@@ -18,6 +18,14 @@
     padding: {
         bottom: 52px;
         top: 101px;
+        left: 16px;
+        right: 16px;
+    }
+    @media screen and (max-width: 767px) {
+        padding: {
+            left: 0;
+            right: 0;
+        }
     }
     .yenilikler-list {
         list-style: none;

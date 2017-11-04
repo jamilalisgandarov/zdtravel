@@ -23,6 +23,7 @@
     <!-- endbuild -->
 
     <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
 
@@ -74,7 +75,11 @@
                             <img src="./images/logo.png" alt="ZD Travel">
                         </div>
                         <div class="menu">
-                            <span class="menu-button">MENYU</span>
+                            <div id="hamburger-button">
+                                <span class="line"></span>
+                                <span class="line"></span>
+                                <span class="line"></span>
+                            </div>
                             <ul>
                                 <li>
                                     <a href="" class='dropdown'>ana səhifə</a>
@@ -481,6 +486,7 @@
     <!-- endbuild -->
 
     <!-- build:js scripts/main.js -->
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
 </body>

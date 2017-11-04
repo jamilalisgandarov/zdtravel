@@ -71,4 +71,30 @@ $(document).ready(function() {
     }
    
   });
+  
+  $('#slider-range').slider({
+    range: true,
+    min: 0,
+    max: 500,
+    values: [ 0, 500 ],
+    create: function( event, ui ) {
+      $('#slider-range > span').append('<span class="range-tooltip"></span>');
+      $('#slider-range .range-tooltip').first().text( '$0');
+      $('#slider-range .range-tooltip').last().text( '$500');
+    },
+    slide: function( event, ui ) {
+      $('#slider-range .range-tooltip').first().text( '$' + ui.values[0]);
+      $('#slider-range .range-tooltip').last().text( '$' + ui.values[1]);
+    }
+  });
+
+  $('#order-button').click(function(e) {
+    e.preventDefault();
+    $('#tour-order-box').fadeToggle(300);
+  })
+
+  $('#hamburger-button').click(function(){
+    $(this).toggleClass('is-active');
+    $('header .menu > ul').slideToggle(300); 
+  });
 });

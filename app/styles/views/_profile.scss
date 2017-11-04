@@ -12,7 +12,11 @@
 }
 
 #profile-content {
-    padding-top: 64px;
+    padding: {
+        top: 64px;
+        left: 16px;
+        right: 16px;
+    };
     .profile-content-title {
         margin-bottom: 36px;
         padding-bottom: 14px;

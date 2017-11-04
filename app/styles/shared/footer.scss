@@ -12,6 +12,16 @@ footer {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+        padding: {
+            left: 16px;
+            right: 16px;
+        }
+        @media screen and (max-width: 767px) {
+            padding: {
+                left: 0;
+                right: 0;
+            }
+        }
         .content {
             position: relative;
             z-index: 2;

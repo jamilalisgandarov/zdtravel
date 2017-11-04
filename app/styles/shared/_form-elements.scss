@@ -90,11 +90,39 @@ a.link-style {
             right: 8px;
         }
     }
+    &:hover {
+        background-color: $color_blue;
+        color: #fff;
+    }
 }
 
-.btn-primary:hover {
-    background-color: $color_blue;
-    color: #fff;
+.search-button {
+    background-color: #fff;
+    color: $color_blue;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 16px 48px 16px 0;
+    position: relative;
+    @include border-radius(32px);
+    @include transition(all 0.3s);
+    span {
+        float: left;
+        margin: 0 48px;
+    }
+    i {
+        background-color: $color_blue;
+        color: #fff;
+        font-size: 16px;
+        line-height: 1;
+        padding: 12px;
+        position: absolute;
+        right: 4px;
+        top: 4px;
+        text-align: center;
+        width: 2.5em;
+        @include border-radius(32px);
+        @include transition(all 0.3s);
+    }
 }
 
 .primary-button {
@@ -127,5 +155,44 @@ a.link-style {
             background-color: $color_blue;
             color: #fff;
         }
+    }
+}
+
+form {
+    
+    .standart-input {
+        margin: {
+            bottom: 32px;
+        }
+        width: 100%;
+        &.half-input {
+            width: 49%;
+        }
+        label {
+            margin: {
+                bottom: 12px;
+            }
+        }
+        .form-input {
+            position: relative;
+            width: 100%;
+            input {
+                background-color: #fff;
+                font-size: 14px;
+                padding: 14px 44px 14px 14px;
+                width: 100%;
+                @include box-sizing(border-box);
+            }
+            .input-icon {
+                color: $color_blue;
+                position: absolute;
+                right: 14px;
+                top: 14px;
+                font-size: 16px;
+            }
+        }
+    }
+    .input-group {
+        width: 100%;
     }
 }

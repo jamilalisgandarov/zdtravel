@@ -128,36 +128,52 @@
                         background-color: rgba(0, 0, 0, 0.5);
                     }
                     .company-team-name {
-                        color: #fff;
-                        font-size: 22px;
-                        font-weight: bold;
-                        line-height: 26px;
-                        margin-bottom: 12px;
-                    }
-                    .company-team-position {
-                        color: #fff;
-                        font-size: 16px;
-                        line-height: 19px;
+                        bottom: 16px;
+                        left: 16px;
+                        right: 16px;
+                        position: absolute;
+                        h2 {
+                            color: #fff;
+                            font-size: 22px;
+                            font-weight: bold;
+                            line-height: 26px;
+                            margin-bottom: 12px;
+                        }
+                        span {
+                            color: #fff;
+                            font-size: 16px;
+                            line-height: 19px;
+                        }
                     }
                     .company-team-about {
                         color: #fff;
                         font-size: 14px;
-                        height: 0;
+                        display: none;
                         line-height: 24px;
                         overflow: hidden;
-                        margin: 0;
+                        margin: auto 0;
+                        position: absolute;
+                        left: 16px;
+                        right: 16px;
+                        top: 50%;
                         text-align: left;
+                        transform: translateY(-50%);
                         @media screen and (max-width: 767px) {
-                            display: none;
+                            display: none !important;
                         }
                     }
                     .company-team-social {
-                        height: 0;
+                        border-top: 1px solid #979797;
+                        bottom: 16px;
+                        display: none;
                         overflow: hidden;
+                        padding-top: 16px;
+                        position: absolute;
+                        left: 16px;
+                        right: 16px;
                         text-align: left;
-                        width: 100%;
                         @media screen and (max-width: 767px) {
-                            display: none;
+                            display: none !important;
                         }
                         a {
                             color: #fff;
@@ -168,14 +184,15 @@
                     }
                     &:hover {
                         background-color: rgba(0, 0, 0, 0.5);
+                        .company-team-name {
+                            bottom: auto;
+                            top: 16px;
+                        }
                         .company-team-about {
-                            height: auto;
-                            margin: auto 0;
+                            display: block;
                         }
                         .company-team-social {
-                            border-top: 1px solid #979797;
-                            height: auto;
-                            padding-top: 16px;
+                            display: block;
                         }
                     }
                 }

@@ -11,6 +11,7 @@
 }
 
 #about-tour-content {
+    background-attachment: fixed;
     background-image: url("/images/yenilikler-bg.png");
     background-size: cover;
     background-position: center;
@@ -94,6 +95,9 @@
         padding: 120px 0 0;
         .tour-timeline-day {
             width: 100%;
+            @media screen and (max-width: 767px) {
+                flex-wrap: wrap;
+            }
             .timeline-day-left {
                 width: 50%;
                 @media screen and (max-width: 767px) {
@@ -171,6 +175,9 @@
 
     #about-tour-order {
         padding: 64px 0;
+        @media screen and (max-width: 767px) {
+            padding: 64px 16px;
+        }
         #order-button {
             background-color: $color_blue;
             color: #fff;
@@ -188,6 +195,37 @@
                 line-height: 44px;
                 width: 44px;
                 @include border-radius(32px);
+            }
+        }
+        #tour-order-box {
+            background-color: $color_blue;
+            color: #fff;
+            display: none;
+            padding: 16px 16px 32px;
+            margin: {
+                top: 24px;
+            }
+            max-width: 960px;
+            width: 100%;
+            label {
+                text-align: left;
+            }
+            .half-input {
+                width: 24%;
+            }
+            textarea {
+                border: none;
+                width: 100%;
+                padding: 14px;
+                resize: none;
+            }
+            @media screen and (max-width: 767px) {
+                .input-group {
+                    flex-wrap: wrap;
+                }
+                .standart-input {
+                    width: 100%;
+                }
             }
         }
     }
@@ -214,7 +252,7 @@
                 padding: 31.33% 0 0;
                 position: relative;
                 width: 31.33%;
-                &:nth-child(2) {
+                &.gallery-item-full {
                     padding: 31.33% 0 0;
                     position: relative;
                     width: 65.66%
