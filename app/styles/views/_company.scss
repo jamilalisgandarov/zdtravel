@@ -49,12 +49,15 @@
     }
     
     #company-services {
+    
+      
         position: relative;
         background-attachment: fixed;
         background-image: url("/images/company-service-bg.png");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+       
         .section-title {
             h1 {
                 color: #fff;

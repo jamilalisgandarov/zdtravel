@@ -12,6 +12,8 @@
 
     <!-- build:css styles/vendor.css -->
     <link rel="stylesheet" href="styles/vendored.css">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    
     <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
     <!-- bower:css -->
     <link rel="stylesheet" href="/bower_components/reset-css/reset.css" />
@@ -42,7 +44,7 @@
         <header>
             <div class="header-top">
                 <div class="wrapper">
-                    <div class="flex flex-between">
+                    <div class="flex flex-between flex-wrap">
                         <ul class="options">
                             <li>
                                 <a href="">Ölkə</a>
@@ -56,16 +58,89 @@
                         </ul>
                         <ul class="user-operations">
                             <li>
-                                <a href="">
+                                <a id="login-button" href="">
                                     Daxil ol
                                 </a>
                             </li>
                             <li>
-                                <a href="">
+                                <a id="register-button" href="">
                                     Qeydiyyat
                                 </a>
                             </li>
                         </ul>
+                        <div class="login-modal">
+                            <div class="login-modal-inner">
+                                <h1 class="text-center">Daxil ol</h1>
+                                <form action="" class="login-form">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Email" name="" id="">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="Şifrə" name="" id="">
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                          <input class="form-check-input" type="checkbox" value="">
+                                          Yadda saxla
+                                        </label>
+                                        <a class="forget-link pull-right" href="#">Şifrəmi unutdum?</a>
+                                    </div>
+                                    <div class="form-group text-center">
+                                        <button class="submit-button">Daxil ol</button>
+                                    </div>
+                                    <div class="form-divider text-center">
+                                        <h3>Sosial media hesabınla daxil ol</h3>
+                                    </div>
+                                    <div class="social-buttons">
+                                        <button class="fb"><i class="fa fa-facebook"></i> Facebook</button>
+                                        <button class="google"><i class="fa fa-google"></i> Google</button>
+                                        <button class="tw"><i class="fa fa-twitter"></i> Twitter</button>
+                                    </div>
+                                    <div class="login-form-footer text-center">
+                                        <p>Hesabın yoxdur? <a href="#">Qeydiyyat</a></p>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="register-modal">
+                            <div class="register-modal-inner">
+                                <h1 class="text-center">Qeydiyyat</h1>
+                                <form action="" class="register-form">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Ad, Soyad" name="" id="">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Email" name="" id="">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="Şifrə" name="" id="">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="Şifrəni təstiqlə" name="" id="">
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                          <input class="form-check-input" type="checkbox" value="">
+                                          <a href="#">Qeydiyyat şərtlərini</a> oxudum və qəbul edirəm
+                                        </label>
+                                    </div>
+                                    <div class="form-group text-center">
+                                        <button class="submit-button">Qeydiyyatdan keç</button>
+                                    </div>
+                                    <div class="form-divider text-center">
+                                        <h3>Sosial media hesabınla daxil ol</h3>
+                                    </div>
+                                    <div class="social-buttons">
+                                        <button class="fb"><i class="fa fa-facebook"></i> Facebook</button>
+                                        <button class="google"><i class="fa fa-google"></i> Google</button>
+                                        <button class="tw"><i class="fa fa-twitter"></i> Twitter</button>
+                                    </div>
+                                    <div class="register-form-footer text-center">
+                                        <p>Qeydiyyatdan keçmisən? <a href="#">Daxil ol</a></p>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1454,6 +1529,7 @@
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <script src="/bower_components/owl.carousel/dist/owl.carousel.js"></script>
     <script src="/bower_components/slick-carousel/slick/slick.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

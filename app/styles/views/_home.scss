@@ -11,7 +11,7 @@
   background-repeat: no-repeat;
   .search-orders {
     position: relative;
-    z-index: 2;
+    z-index: 1;
     margin: 228px 26px 0 26px;
     .search-types {
       .type {
@@ -125,6 +125,7 @@
 }
 
 #services {
+  z-index: 1;
   position: relative;
   margin-top: 80px;
   padding: 80px 16px;
@@ -383,6 +384,8 @@
 /*----------  Suggested Otels  ----------*/
 
 #suggested-hotels {
+  z-index: 1;
+  position: sticky;
   padding: 160px 16px 0;
   .otels-list {
     margin-top: 60px;
@@ -534,6 +537,7 @@
 #user-reviews {
   position: relative;
   height: 383px;
+  z-index: 1;
   background-image: url("../images/user-reviews.png");
   background-size: cover;
   background-position: center;

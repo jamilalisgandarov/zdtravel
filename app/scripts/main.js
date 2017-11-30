@@ -71,7 +71,7 @@ $(document).ready(function() {
     }
    
   });
-  
+  if($('#slider-range')>0){
   $('#slider-range').slider({
     range: true,
     min: 0,
@@ -87,6 +87,7 @@ $(document).ready(function() {
       $('#slider-range .range-tooltip').last().text( '$' + ui.values[1]);
     }
   });
+}
 
   $('#order-button').click(function(e) {
     e.preventDefault();
@@ -97,4 +98,35 @@ $(document).ready(function() {
     $(this).toggleClass('is-active');
     $('header .menu > ul').slideToggle(300); 
   });
+
+  $('#login-button').click(function(e) {
+    e.preventDefault();
+    $('.login-modal').css({
+      display: 'flex'
+    });
+  })
+
+  $('.login-modal').click(function() {
+    $(this).hide();
+  })
+
+  $('.login-modal-inner').click(function(e) {
+    e.stopPropagation();
+  })
+
+  $('#register-button').click(function(e) {
+    e.preventDefault();
+    $('.register-modal').css({
+      display: 'flex'
+    });
+  })
+
+  $('.register-modal').click(function() {
+    $(this).hide();
+  })
+
+  $('.register-modal-inner').click(function(e) {
+    e.stopPropagation();
+  })
+
 });

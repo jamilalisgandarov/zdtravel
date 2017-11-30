@@ -1,0 +1,149 @@
+#bonus-content{
+    padding: {
+        top: 64px;
+        left: 16px;
+        right: 16px;
+    };
+    .bonus-content-title {
+        margin-bottom: 36px;
+        padding-bottom: 14px;
+        height: 70px;
+        box-sizing: border-box;
+        position: relative;
+        width: 309px;
+        left: 58%;
+        border: 2px solid #2CA9E0;
+        padding: 18px;
+       
+        h1 {
+            color: #2CA9E0;
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 29px;
+        }
+    }
+    .bonus-tours-wrapper {
+        
+        overflow-y: auto;
+        padding-right: 16px;
+        &::-webkit-scrollbar {
+            width: 8px;
+        }
+         
+     
+         
+        &::-webkit-scrollbar-thumb {
+          background-color: #ccc;
+          outline: none;
+        }
+        #bonus-tours-list {
+position: relative;
+
+            margin: {
+                bottom: 38px;
+            }
+            thead{
+                background: #F3F2F2;
+            }
+            .table{
+
+                tr{
+                    line-height: 1.7;
+                    // border-bottom: 1px solid #2CA9E0; 
+                }
+                th{
+                    color: #2CA9E0;  
+                    
+                        border-bottom: none;
+                        border-top: none;
+                    
+                }
+
+              
+                tbody{
+// border-right: 1px solid #2CA9E0;
+// border-left: 1px solid #2CA9E0;
+
+
+                    tr{
+
+ td{
+    // border-top: 1px solid #2CA9E0;
+    .bonusImage{
+      
+            span{
+                margin-right: 37px;
+                float: left;
+                img{
+                    height:50px;
+                    width:50px;
+                     border-radius:50%
+                }
+               
+            }
+        
+        h1{
+          color: #2CA9E0;  
+        }
+    
+    }
+
+}
+.bonusPoint{
+
+    span{
+        border-radius: 13px;
+        
+          padding: 6px 28px;
+       
+          color: white;
+          background: #2CA9E0;
+    }
+
+}
+                        
+                   .bonusCode{
+                       a{
+                           color: #2CA9E0;
+                       }
+                   }
+                    }
+                }
+            }
+          
+        }
+    }
+    nav{
+        position: relative;
+        left: 41%;
+        margin-bottom: 5%;
+        a{
+            border: none;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        & {
+            padding: {
+                left: 16px;
+                right: 16px;
+            }
+            .profile-tours-wrapper {
+                padding: 0;
+                #profile-tours-list {
+                    .tour {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    } 
+@media screen and (max-width:320px) {
+   .bonus-content-title{
+        left: 0;
+        width: 291px;
+       
+    }
+    
+}
+
+}

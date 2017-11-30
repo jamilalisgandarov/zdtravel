@@ -8,7 +8,8 @@
     "owl.carousel": "owl-carousel2#~2.2.1",
     "font-awesome": "~4.7.0",
     "slick-carousel": "^1.8.1",
-    "css-star-rating": "^1.1.3"
+    "css-star-rating": "^1.1.3",
+    "bootstrap": "3.3.7"
   },
   "devDependencies": {
     "chai": "^4.1.2",
