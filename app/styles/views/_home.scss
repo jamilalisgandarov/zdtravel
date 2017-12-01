@@ -15,9 +15,11 @@
     margin: 228px 26px 0 26px;
     .search-types {
       .type {
+       
         min-width: 25%;
         background-color: rgba(0, 0, 0, 0.2);
         text-align: center;
+       
         font-weight: 500;
         color: white;
         padding: 12px;
@@ -122,6 +124,7 @@
       }
     }
   }
+  
 }
 
 #services {
@@ -287,7 +290,7 @@
       font-family: $font_san-francisco;
       @media screen and (max-width: 767px) {
         padding: 0 16px;
-        width: 100%;
+        width: 93%;
       }
       .title {
         font-size: 56px;
@@ -323,7 +326,7 @@
         width: 100%;
       }
       .slick-list {
-        overflow: visible;
+        overflow: hidden;
         .slick-slide {
           transition: 0.4s ease-out;
           transform: scale(0);
@@ -334,7 +337,7 @@
               div {
                 width: 100%;
                 display: inline-block;
-                margin-left: -65px;
+                margin-left: -44px;
                 margin-top: -30px;
               }
             }
@@ -779,7 +782,50 @@
       }
     }
   }
+  
 }
+
+@media only screen 
+
+and (max-device-width: 767px)
+and (-webkit-min-device-pixel-ratio: 2) {
+  #search-home .search-orders .search-types .type{
+  width: 100%;
+  }
+}
+
+@media only screen 
+
+and (max-device-width:1024px){
+
+  #explore{
+position: relative;
+    height: 780px;
+    .explore{
+
+      position: relative;
+      .explore-previews{
+        width: 93%;
+        position: relative;
+        right: 0;
+        bottom: 26px;
+        .navs{
+          position: absolute;
+          right: 0px;
+          bottom: -35px;
+         
+
+        }
+      }
+
+      .explore-content .link{
+margin-top: 13px;
+
+      }
+    }
+  }
+}
+
 
 @keyframes passportMove {
   0% {

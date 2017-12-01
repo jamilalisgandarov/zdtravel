@@ -129,4 +129,18 @@ $(document).ready(function() {
     e.stopPropagation();
   })
 
+
+
+ 
+
+    // var viewportWidth = $(window).width();
+    // if (viewportWidth < 600) {
+    //         $(".flx").addClass("flex-wrap");
+            
+    // }
+    // else{
+
+    //   $(".flx").removeClass("flex-wrap")
+    // }
+
 });

@@ -49,7 +49,7 @@ position: relative;
 
                 tr{
                     line-height: 1.7;
-                    // border-bottom: 1px solid #2CA9E0; 
+
                 }
                 th{
                     color: #2CA9E0;  
@@ -61,14 +61,11 @@ position: relative;
 
               
                 tbody{
-// border-right: 1px solid #2CA9E0;
-// border-left: 1px solid #2CA9E0;
-
-
                     tr{
 
  td{
-    // border-top: 1px solid #2CA9E0;
+     vertical-align: middle;
+
     .bonusImage{
       
             span{
@@ -115,7 +112,7 @@ position: relative;
     }
     nav{
         position: relative;
-        left: 41%;
+     text-align: center;
         margin-bottom: 5%;
         a{
             border: none;
@@ -136,14 +133,30 @@ position: relative;
                 }
             }
         }
+        .bonusImage{
+            width: 250px;
+        }
+        .bonusAge{
+            text-align: center;
+        }
     } 
-@media screen and (max-width:320px) {
-   .bonus-content-title{
-        left: 0;
-        width: 291px;
-       
+    @media only screen 
+    and (min-device-width: 320px) 
+    and (max-device-width: 568px)
+    and (-webkit-min-device-pixel-ratio: 2) {
+        .bonus-content-title{
+            left: 0%;
+           
+            width: 283px;
+
+            h1{
+                font-size: 19px;
+            }
+           
+        }
     }
+
     
-}
+
 
 }
