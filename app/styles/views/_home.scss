@@ -12,6 +12,7 @@
   .search-orders {
     position: relative;
     z-index: 1;
+    padding-bottom: 20px;
     margin: 228px 26px 0 26px;
     .search-types {
       .type {
@@ -788,9 +789,13 @@
 @media only screen 
 
 and (max-device-width: 767px)
-and (-webkit-min-device-pixel-ratio: 2) {
+{
   #search-home .search-orders .search-types .type{
   width: 100%;
+  }
+
+  .reviews .owl-stage .owl-item:nth-child(even) .review{
+    margin-top: 0px !important;
   }
 }
 

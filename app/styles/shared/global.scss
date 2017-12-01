@@ -325,3 +325,18 @@ body {
       }
     }
 }
+@media only screen 
+and (max-device-width:600px){
+
+    .contact-person{
+
+
+        img{
+            left: 47px;
+        }
+       
+    }
+    .contact-person:before{
+        left: 45px !important;
+    }
+}
