@@ -325,9 +325,12 @@
       width: 50%;
       @media screen and (max-width: 767px) {
         width: 100%;
+        .slick-list{
+          overflow: hidden !important;
+        }
       }
       .slick-list {
-        overflow: hidden;
+        overflow: visible;
         .slick-slide {
           transition: 0.4s ease-out;
           transform: scale(0);
